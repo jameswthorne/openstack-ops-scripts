@@ -22,7 +22,6 @@ fi
 if [ "$#" -ne "2" ]; then
     echo "Usage: $0 <ABSOLUTE PATH TO EMAIL LIST> <PROJECT NAME>"
     echo
-    echo "Be sure to source admin's openrc file before running."
     exit 1
 fi
 
