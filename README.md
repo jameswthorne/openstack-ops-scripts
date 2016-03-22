@@ -6,9 +6,7 @@ add-openstack-users-to-project.sh
 
 ### Summary
 
-This bash script is intended to be run within the utility LXC container on any of the OpenStack Controller Nodes.
-
-This bash script will allow you to quickly add many users to an OpenStack Project regardless if they exist or not.
+Quickly add one to many users to an OpenStack Project regardless if they exist or not.
 
 ### Usage
 
@@ -49,9 +47,7 @@ reset-openstack-users-password.sh
 
 ### Summary
 
-This bash script is intended to be run within the utility LXC container on any of the OpenStack Controller Nodes.
-
-This bash script will allow you to quickly reset many user's password.
+Quickly reset many user's password.
 
 ### Usage
 
