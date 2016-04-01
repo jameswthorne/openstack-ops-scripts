@@ -49,7 +49,7 @@ while read i; do
         openstack role add --user $USERNAME --project $PROJECT swiftoperator
         openstack role add --user $USERNAME --project $PROJECT heat_stack_owner
         # POST the generated password to password sharing website
-        PASSWORDLINK=$(curl -sS -X POST -d "$PASSWORD" -H "Content-Type:text/plain" https://passwd.thornelabs.net/api | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["web"]')
+        PASSWORDLINK=$(curl -sS -X POST -d '{"password":"'"$PASSWORD"'"}' -H "Content-Type:application/json" https://passwd.thornelabs.net/api | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["web"]')
 
         echo "Username: $USERNAME"
         echo "Email: $EMAIL"
