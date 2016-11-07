@@ -34,7 +34,7 @@ while read i; do
         # If user exists, change password
         openstack user set --password $PASSWORD $USERNAME
         # POST the generated password to password sharing website
-        PASSWORDLINK=$(curl -sS -X POST -d '{"password":"'"$PASSWORD"'"}' -H "Content-Type:application/json" https://passwd.thornelabs.net/api | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["web"]')
+        PASSWORDLINK=$(curl -sS -X POST -d '{"password":"'"$PASSWORD"'"}' -H "Content-Type:application/json" https://snappass.pw/api | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["web"]')
 
         echo "Username: $USERNAME"
         echo "Email: $EMAIL"
